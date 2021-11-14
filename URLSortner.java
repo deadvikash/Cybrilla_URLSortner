@@ -65,23 +65,11 @@ public class URLSortner {
             return null;
     }
 
-    // Delete the mapping between this longUrl and its corresponding shortUrl
-    public static void  delete(String longUrl){
-         map.remove(longUrl);
-    }
+    
 
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Type Delete if you want to delete a mapping between SOrtURL and LongURL" +
-                "  or type add for the opposite: ");
-        if(sc.nextLine() == "Delete"){
-            System.out.println("Enter the LongURL whose mapping will be deleted : " );
-            String longUrl = sc.nextLine();
-            delete(longUrl);
-            System.out.println("Its done");
-        }
-        else {
             System.out.println("Type SortURL if you want to get the SortURL for the LongURL or  type LongURL " +
                     "if you want to get the LongURL for the SortURL : ");
             if (sc.nextLine() == "LongURL") {
@@ -105,7 +93,7 @@ public class URLSortner {
                     }
                 }
             }
-        }
+        
 
     }
 }
